@@ -1,5 +1,19 @@
 # Cyber4ML_Framework application in "Precious" HTB machine.
 
+## Framework application details
+
+|Documentation|MITRE ATT&CK|Network Analysis|Log Analysis|
+|-|-|-|-|
+|Yes|Yes|Yes|Yes|
+
+|Attacker Level|Environment|VPN|Attacker IP|Victim IP|
+|-|-|-|-|-|
+|Average|Linux|Yes|10.10.16.27|10.10.11.189|
+
+## Documentation
+
+Documentation of the attack: [Precious Documentation](https://github.com/stevendamianakis/HackTheBox_Writeups/blob/main/Machines/Precious/README.MD)
+
 ## MITRE ATT&CK mapping
 
 Below, we map the attack to the MITRE ATT&CK Enterprise framework.
@@ -46,3 +60,9 @@ ssh henry@10.10.11.189
               git_set: "chmod +s /bin/bash"
           method_id: :resolve
 ```
+
+## Network Analysis
+
+Pcap file of the attack:
+
+## Log Analysis
