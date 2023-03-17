@@ -24,8 +24,8 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | Execution | Command and Scripting Interpreter | Unix Shell | (1) |
 | Persistence | Boot or Logon Autostart Execution | Login Items | - |
 | Defence Evasion | File and Directory Permissions Modification | Linux and Mac File and Directory Permissions Modification | - |
-| Credential Access |  Input Capture | Keylogging | (1) |
-| Collection |  Input Capture | Keylogging | (1) |
+| Credential Access |  Input Capture | Keylogging | [keylogger.py](https://github.com/stevendamianakis/Keylogger/blob/main/keylogger.py) |
+| Collection |  Input Capture | Keylogging | [keylogger.py](https://github.com/stevendamianakis/Keylogger/blob/main/keylogger.py) |
 
 #### Commands
 - (1)
