@@ -10,6 +10,8 @@
 |-|-|-|-|-|
 |Average|Linux|Yes|10.10.16.36|10.10.11.189|
 
+**Average:** The knowledge, behavior and attack-timing of the attacker is average.
+
 ## Documentation
 
 Documentation of the attack: [Precious Documentation](https://github.com/stevendamianakis/HackTheBox_Writeups/blob/main/Machines/Precious/README.MD)
