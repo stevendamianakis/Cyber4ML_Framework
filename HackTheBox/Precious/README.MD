@@ -24,7 +24,7 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | - | - | - | - | - |
 | Initial Access | Exploit Public-Facing Application | - | (1) | CVE-2022-25765/CWE-78 |
 | Execution | Command and Scripting Interpreter | Unix Shell | (1) | - |
-| Persistence | Valid Accounts | Default Accounts | (2) | - |
+| Persistence | Valid Accounts | Local Accounts | (2) | - |
 | Privilege Escalation | Exploitation for Privilege Escalation | - | [dependencies.yml](https://github.com/stevendamianakis/Cyber4ML_Framework/blob/main/HackTheBox/Precious/dependencies.yml) | CVE-2017-18342/CWE-502 |
 
 #### Commands/Scripts
