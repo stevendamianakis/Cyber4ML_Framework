@@ -25,8 +25,8 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | Reconnaissance | Active Scanning | Wordlist Scanning | (1) | - |
 | Initial Access | Exploit Public-Facing Application | - | (2) | - |
 | Execution | Exploitation for Client Execution | - | (2) | - |
-| Initial Access | Exploit Public-Facing Application | - | (3) | CVE-2020-24815 |
-| Execution | Exploitation for Client Execution | - | (3) | CWE-918 |
+| Initial Access | Exploit Public-Facing Application | - | (3) | CVE-2020-24815/CWE-918 |
+| Execution | Exploitation for Client Execution | - | (3) | CVE-2020-24815/CWE-918 |
 | Initial Access | Valid Accounts | Local Accounts | - | - |
 | Persistence | Valid Accounts | Local Accounts | (4) | - |
 | Privilege Escalation | Exploitation for Privilege Escalation | - | (5) | - |
