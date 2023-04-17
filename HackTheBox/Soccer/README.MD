@@ -25,9 +25,11 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | Reconnaissance | Active Scanning | Wordlist Scanning | (1) | - |
 | Initial Access | Valid Accounts | Local Accounts | - | - |
 | Initial Access | Exploit Public-Facing Application | - | [reverse_shell.php](https://github.com/stevendamianakis/Cyber4ML_Framework/blob/main/HackTheBox/Soccer/reverse_shell.php) | CVE-2021-45010/CWE-22 |
+| Execution | Exploitation for Client Execution | - | [reverse_shell.php](https://github.com/stevendamianakis/Cyber4ML_Framework/blob/main/HackTheBox/Soccer/reverse_shell.php) | CVE-2021-45010/CWE-22 |
 | Discovery | System Owner/User Discovery | - | (2) | - |
 | Discovery | File and Directory Discovery | - | (3) | - |
 | Initial Access | Exploit Public-Facing Application | - | (4), [exploit.py](https://github.com/stevendamianakis/Cyber4ML_Framework/blob/main/HackTheBox/Soccer/exploit.py) | - |
+| Execution | Command and Scripting Interpreter | Unix Shell | (4), [exploit.py](https://github.com/stevendamianakis/Cyber4ML_Framework/blob/main/HackTheBox/Soccer/exploit.py) | - |
 | Persistence | Valid Accounts | Local Accounts | (5) | - |
 | Discovery | Permission Groups Discovery | Local Groups | (6) | - |
 | Privilege Escalation | Abuse Elevation Control Mechanism | Setuid and Setgid | (7) | - |
