@@ -28,6 +28,12 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 ```
 On March 7, 2017, a critical vulnerability in the Apache Struts software was publicly
 disclosed. Equifax used Apache Struts to run certain applications on legacy operating systems.
+
+On May 13, 2017, attackers began a cyberattack on Equifax. The attack lasted for 76
+days. The attackers dropped “web shells” (a web-based backdoor) to obtain remote control over
+Equifax’s network. They found a file containing unencrypted credentials (usernames and
+passwords), enabling the attackers to access sensitive data outside of the ACIS environment. The
+attackers were able to use these credentials to access 48 unrelated databases
 ```
 
 - (2)
