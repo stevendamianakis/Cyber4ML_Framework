@@ -29,7 +29,7 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | Impact | Theft of Operational Information | - | (4) |
 
 
-#### Commands/Scripts
+#### Documentation Parts
 - (1)
 ```
 To reduce the fabrication cost, most of the manufacturing and
