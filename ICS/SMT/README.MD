@@ -13,7 +13,7 @@ Documentation of the attack: [SMT Paper](https://tches.iacr.org/index.php/TCHES/
 
 ## MITRE ATT&CK mapping
 
-Below, we map the attack to the MITRE ATT&CK Enterprise framework.
+Below, we map the attack to the MITRE ATT&CK ICS framework.
 
 | Tactic | Technique | Subtechnique | Description |
 | - | - | - | - |
