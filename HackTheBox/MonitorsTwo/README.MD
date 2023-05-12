@@ -21,6 +21,7 @@ Documentation of the attack: [MonitorsTwo Documentation](https://github.com/stev
 Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 
 | Tactic | Technique | Subtechnique | Command/Script | CVE/CWE |
+| - | - | - | - | - |
 | Reconnaissance | Gather Victim Host Information | Software | - | - |
 | Initial Access | Exploit Public-Facing Application | - | [exploit.py](https://github.com/stevendamianakis/HackTheBox_Writeups/blob/main/Machines/MonitorsTwo/exploit.py) | CVE-2022-46169/CWE-77/CWE-74  |
 | Execution | Exploitation for Client Execution | - | [exploit.py](https://github.com/stevendamianakis/HackTheBox_Writeups/blob/main/Machines/MonitorsTwo/exploit.py) | CVE-2022-23935/CWE-77/CWE-74  |
