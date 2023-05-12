@@ -21,6 +21,7 @@ Documentation of the attack: [Investigation Documentation](https://github.com/st
 Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 
 | Tactic | Technique | Subtechnique | Command/Script | CVE/CWE |
+| - | - | - | - | - |
 | Reconnaissance | Gather Victim Host Information | Software | - | - |
 | Initial Access | Exploit Public-Facing Application | - | (1) | CVE-2022-23935/CWE-77 |
 | Execution | Exploitation for Client Execution | - | (1) | CVE-2022-23935/CWE-77 |
@@ -28,7 +29,7 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | Discovery | File and Directory Discovery | - | (3) | - |
 | Persistence | Valid Accounts | Local Accounts | (4) | - |
 | Discovery | Permission Groups Discovery | Local Groups | (5) | - |
-| Privilege Escalation | Exploitation for Privilege Escalation | - | - |
+| Privilege Escalation | Exploitation for Privilege Escalation | - | - | - |
 
 #### Commands/Scripts
 - (1)
