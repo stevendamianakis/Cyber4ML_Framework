@@ -31,7 +31,7 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | Credential Access | Credentials from Password Stores | Password Managers | - | - |
 | Credential Access | Brute Force | Password Cracking | (4) | - |
 | Persistence | Valid Accounts | Local Accounts | (5) | - |
-| Privilege Escalation | Exploitation for Privilege Escalation | - | - |
+| Privilege Escalation | Exploitation for Privilege Escalation | - | - | - |
 
 #### Commands/Scripts
 
