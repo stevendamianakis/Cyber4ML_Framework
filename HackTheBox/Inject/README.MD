@@ -30,7 +30,7 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | Execution | Exploitation for Client Execution | - | - | CVE-2022-22963/CWE-94 |
 | Discovery | System Owner/User Discovery | - | (2) | - |
 | Credential Access | Credentials from Password Stores | - | - | - |
-| Privilege Escalation | Exploitation for Privilege Escalation | - | - |
+| Privilege Escalation | Exploitation for Privilege Escalation | - | - | - |
 
 #### Commands/Scripts
 - (1)
