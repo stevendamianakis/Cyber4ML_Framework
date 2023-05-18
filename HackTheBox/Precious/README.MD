@@ -24,7 +24,7 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | - | - | - | - | - |
 | Reconnaissance | Gather Victim Host Information | Software | - | - |
 | Initial Access | Exploit Public-Facing Application | - | (1) | CVE-2022-25765/CWE-78 |
-| Execution | Command and Scripting Interpreter | Unix Shell | (1) | CVE-2022-25765/CWE-78 |
+| Execution | Exploitation for Client Execution | - | (1) | CVE-2022-25765/CWE-78 |
 | Persistence | Valid Accounts | Local Accounts | (2) | - |
 | Discovery | System Owner/User Discovery | - | - | - |
 | Discovery | File and Directory Discovery | - | - | - |
