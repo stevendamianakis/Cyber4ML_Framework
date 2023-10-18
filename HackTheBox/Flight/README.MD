@@ -134,6 +134,6 @@ whoami /all
 
 ## Network Data
 
-Pcap file of the attack: [Capture File](https://github.com/stevendamianakis/Cyber4ML_Framework/blob/main/HackTheBox/Flight/attack_capture.pcapng)
+Pcap file of the attack: [Capture File](https://github.com/stevendamianakis/Cyber4ML_Framework/blob/main/HackTheBox/Flight/attack_capture.zip)
 
 ## Malicious Log Data
