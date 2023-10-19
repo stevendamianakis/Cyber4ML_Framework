@@ -33,6 +33,8 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | Execution | User Execution | Malicious File | (10) | - |
 | Initial Access | Exploit Public-Facing Application | - | - | - |
 | Execution | Command and Scripting Interpreter | PowerShell | (11) | - |
+| Persistence | External Remote Services | - | - | - |
+| Persistence | Valid Accounts | Local Accounts | - | - |
 | Privilege Escalation | Valid Accounts | Local Accounts | - | - |
 | Discovery | File and Directory Discovery | - | - | - |
 | Discovery | System Network Connections Discovery | - | (13) | - |
