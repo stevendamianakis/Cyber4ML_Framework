@@ -33,6 +33,9 @@ Below, we map the attack to the MITRE ATT&CK Enterprise framework.
 | Discovery | Permission Groups Discovery | Local Groups | (3) | - |
 | Privilege Escalation | Exploitation for Privilege Escalation | - | [dependencies.yml](https://github.com/stevendamianakis/Cyber4ML_Framework/blob/main/HackTheBox/Precious/dependencies.yml) | CVE-2017-18342/CWE-502 |
 | Execution | Command and Scripting Interpreter | Unix Shell | (4) | - |
+| Lateral Movement | Remote Services | SSH | - | - |
+| Collection | Data from Local System | - | - | - |
+| Command and Control | Non-Application Layer Protocol | - | - | - |
 
 
 #### Commands/Scripts
